@@ -1,0 +1,11 @@
+#bini{
+    padding-left: 100px;
+    background : pink
+}
+
+.custom-img{
+    width: 100%;
+    max-width: 300px;
+    height:auto;
+}
+
