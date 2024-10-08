@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Song List</title>
+</head>
+<body>
+    <div class="container mt-5 border rounded p-4 bg-secondary">
+        <h3 class="text-center">Bini Song</h3> 
+
+        <div class="row">
+            <!-- Song List -->
+            <div class="col-md-6">
+                <div class="border rounded p-3 mb-4 bg-white">
+                    <h5 class="text-center text-dark">Song List</h5>
+                    <!-- Search Bar -->
+                    <div class="mb-4">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search for a song..." aria-label="Search for a song">
+                            
+                        </div>
+                    </div>
+
+                    <!-- Songs -->
+                    <ul class="list-group" id="songList">
+                        <li class="list-group-item d-flex justify-content-between align-items-center py-1">
+                            <div>
+                                <p class="song name">Pantropiko</p>
+                                <small class="song-artist fw-dark">Bini</small>
+                            </div>
+                            <button class="btn btn-danger btn-sm">Delete</button>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center py-1">
+                            <div>
+                                <p class="song name">Lagi</p>
+                                <small class="song-artist fw-dark">Bini</small>
+                            </div>
+                            <button class="btn btn-danger btn-sm">Delete</button>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center py-1">
+                            <div>
+                                <p class="song name">Salamin</p>
+                                <small class="song-artist fw-dark">Bini</small>
+                            </div>
+                            <button class="btn btn-danger btn-sm">Delete</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Add Song Form -->
+            <div class="col-md-6">
+                <div class="border rounded p-3 mb-3 bg-white d-flex justify-content-center">
+                    <div class="w-100"> 
+                        <h5 class="text-center">Add a New Song</h5>
+                       
+                            <div class="form-row">
+                                <div class="form-group col-md-7">
+                                    <label for="songTitle">Title:</label>
+                                    <input type="text" class="form-control" id="songTitle" placeholder="Enter song title">
+                                    <label for="artist">Artist:</label>
+                                    <input type="text" class="form-control" id="artist" placeholder="Enter artist name">
+                                </div>
+                                <div class="form-group col-md-5">
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-secondary " id="addbtn">Add</button>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html
