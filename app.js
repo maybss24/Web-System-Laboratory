@@ -1,48 +1,71 @@
 const title = document.getElementById('songTitle');
 const artist = document.getElementById('artist');
 const addbtn = document.getElementById('addbtn');
-const ul = document.getElementById('songList'); 
+const ul = document.getElementById('songList');
+const searchBar = document.getElementById('searchInput');
 
+// Add new song functionality
 addbtn.addEventListener('click', () => {
-    // Get value from input form
     const newTitle = title.value;
     const newArtist = artist.value;
 
-    // Create elements
+    if (newTitle === '' || newArtist === '') {
+        alert('Both title and artist fields are required!');
+        return;
+    }
+
     const li = document.createElement('li');
     li.classList.add('list-group-item', 'd-flex', 'justify-content-between', 'align-items-center', 'py-1');
 
     const div = document.createElement('div');
-
     const p = document.createElement('p');
     const small = document.createElement('small');
 
-    // Set value to the elements
     p.innerText = newTitle;
     small.innerText = newArtist;
 
-    // Add classes to elements
     p.classList.add('song', 'name');
     small.classList.add('song-artist', 'fw-dark');
 
-    // Append elements
     div.append(p);
     div.append(small);
     li.append(div);
 
-    // Create delete button
     const deleteBtn = document.createElement('button');
     deleteBtn.classList.add('btn', 'btn-danger', 'btn-sm');
     deleteBtn.innerText = 'Delete';
-   
-    li.append(deleteBtn);
-    ul.append(li); 
 
+    deleteBtn.onclick = () => {
+        ul.removeChild(li);
+    }
+
+    li.append(deleteBtn);
+    ul.append(li);
 
     
-
-
     title.value = '';
     artist.value = '';
+
+    searchSongs();
 });
+
+
+searchBar.addEventListener('input', searchSongs);
+
+
+function searchSongs() {
+    const searchText = searchBar.value.toLowerCase();
+    const songs = Array.from(ul.getElementsByTagName('li'));
+
+    
+    ul.innerHTML = '';
+
+  
+    songs.filter(song => {
+        const songTitle = song.querySelector('.song').innerText.toLowerCase();
+        return songTitle.includes(searchText);
+    }).forEach(matchingSong => {
+        ul.appendChild(matchingSong);
+    });
+}
 
