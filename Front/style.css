@@ -1,0 +1,30 @@
+:root {
+    --primary-color: #3b5998; 
+    --secondary-color: #f1c40f; 
+    --highlight-color: #f9ca24; 
+    --light-color: #f5f6fa;
+    --dark-color: #1e272e;
+    --gradient: linear-gradient(90deg, #3b5998, #ebe6d3); 
+}
+
+body {
+    background: var(--gradient);
+    color: var(--dark-color);
+}
+
+.menu-item {
+    background-color: var(--light-color);
+    border-color: var(--secondary-color);
+}
+
+.navbar {
+    background: var(--gradient);
+}
+
+.navbar-brand {
+    color: var(--light-color);
+}
+
+.card-title {
+    color: var(--primary-color);
+}
