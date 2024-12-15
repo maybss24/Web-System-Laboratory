@@ -84,6 +84,7 @@ header {
 
 #h1{
     font-family: cursive;
+    
 }
 
 .container{
@@ -102,6 +103,7 @@ table {
     width: 100%;
     background-color:#beb7b2;
     padding: 20%;
+   
   }
 
 th{
@@ -123,12 +125,12 @@ table td:first-child {
       border-right: none; 
   }
 
-.add-employee,.add-bread,.add-pastry,.add-coffee {
+.add-workout {
     position: absolute;
     font-size: 25px;
     color:#fff;
-    top: 130px;
-    right: 167px;
+    top: 150px;
+    right: 300px;
     cursor: pointer;
 }
 
